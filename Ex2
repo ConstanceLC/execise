@@ -1,0 +1,27 @@
+#Ask the user for a number. Depending on whether the number is even or odd, print out an appropriate message to the user. Hint: how does an even / odd number react differently when divided by 2?
+
+#Extras:
+
+#    If the number is a multiple of 4, print out a different message.
+#    Ask the user for two numbers: one number to check (call it num) and one number to divide by (check). If check divides evenly into num, tell that to the user. If not, print a different appropriate message.
+
+# check even or odd or mutiple of 4
+n = int(input("Please enter a number[q to quit] : "))
+
+if n % 2 == 0:
+    print("This is a even number")
+
+if n % 4 == 0:
+    print('This is a multiple of 4')
+
+if n % 2 != 0:
+    print("this is an odd number")
+
+#check whether divides evenly
+n1 = int(input("Please enter the second number : "))
+if n%n1 ==0:
+  print('They can divide evenly')
+else:
+  print('They cannot divide evenly')
+
+print('Answer: '+str(n//n1)+' left '+str(n%n1))
