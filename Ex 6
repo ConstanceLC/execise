@@ -1,0 +1,11 @@
+# Exercise 6 (and Solution)
+#
+# Ask the user for a string and print out whether this string is a palindrome or not.
+#
+# (A palindrome is a string that reads the same forwards and backwards.)
+
+word = input('Please enter a word :')
+if word == word[(len(word))::-1]:
+    print(word +' :This is a palindrome')
+else :
+    print(word.capitalize() +':This is not a palindrome')
