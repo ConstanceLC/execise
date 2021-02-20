@@ -1,0 +1,41 @@
+# Make a two-player Rock-Paper-Scissors game.
+# (Hint: Ask for player plays (using input), compare them,
+# print out a message of congratulations to the winner,
+# and ask if the players want to start a new game)
+
+# Remember the rules:
+
+    # Rock beats scissors
+    # Scissors beats paper
+    # Paper beats rock
+
+# player input
+import random
+game = input('Game start[Y/N]?').capitalize()
+
+while game =='Y':
+    p1 = input('Player 1 - Rock(R)/Scissors(S)/Paper(P)?: ').lower()
+    p2 = random.choice(['r','s','p'])
+    print('Player 2 - Rock(R)/Scissors(S)/Paper(P)?: '+p2)
+
+# result : draw
+    if p1 == p2 :
+        print('draw')
+        
+# result : win
+    elif (p1 == 'r' and p2 == 's') or (p1 == 's' and p2 == 'p') or (p1 == 'p' and p2 == 'r'):
+        print('You win')
+        
+# result : lose
+    elif (p1 == 's' and p2 == 'r') or (p1 == 'p' and p2 == 's') or (p1 == 'r' and p2 == 'p'):
+        print('You lose')
+
+    else :
+        print('Error')
+        
+    game = input('Game start[Y/N]?').capitalize()
+    
+# Game over
+while game == 'N':
+    print('Game Over')
+    break
